@@ -5,21 +5,22 @@ from django.http import HttpResponseRedirect
 from django.core.urlresolvers import reverse
 
 from myproject.myapp.models import Document
-from myproject.myapp.forms import DocumentForm
+from myproject.myapp.forms import PatientForm
 
 
 def list(request):
     # Handle file upload
     if request.method == 'POST':
-        form = DocumentForm(request.POST, request.FILES)
+        form = PatientForm(request.POST, request.FILES)
         if form.is_valid():
-            newdoc = Document(docfile=request.FILES['docfile'])
-            newdoc.save()
+            print('form provided')
+            #newdoc = Document(docfile=request.FILES['docfile'])
+            #newdoc.save()
 
             # Redirect to the document list after POST
             return HttpResponseRedirect(reverse('list'))
     else:
-        form = DocumentForm()  # A empty, unbound form
+        form = PatientForm()  # A empty, unbound form
 
     # Load documents for the list page
     documents = Document.objects.all()
