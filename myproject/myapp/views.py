@@ -18,17 +18,13 @@ def list(request):
         #if form.is_valid():
         print('form provided')
         print(form)
-            #newdoc = Document(docfile=request.FILES['docfile'])
-            #newdoc.save()
+        for key in form.species:
+            newitem = Sample(date=form.date, hospital=form.hospital, doctor=form.doctor, gender=form.gender, age_group=form.age_group, postcode=form.postcode, country=form.country, travel_last_6_m = form.travel_last_6_m, condition = form.condition, allergies_ab = form.allergies_ab, current_ab = form.current_ab, specie = key, strain = form.strains, resistances = form.resistances)
+            newitem.save()
 
-            # Redirect to the document list after POST
-        return JsonResponse({'species': 'asd', 'strains': 'asd', 'resistances': 'asd'})
-        #    return HttpResponseRedirect(reverse('list'))
+        return JsonResponse({'result': 'saved'})
     else:
         form = PatientForm()  # A empty, unbound form
-
-    # Load documents for the list page
-    #documents = Document.objects.all()
 
     # Render list page with the documents and the form
     return render(

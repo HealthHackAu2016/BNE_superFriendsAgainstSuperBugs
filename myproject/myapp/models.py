@@ -14,3 +14,6 @@ class Sample(models.Model):
     condition = models.TextField()
     allergies_ab = models.TextField()
     current_ab = models.TextField()
+    specie = models.TextField()
+    strain = models.TextField()
+    resistances = models.TextField()
