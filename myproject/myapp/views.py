@@ -14,14 +14,16 @@ import csv
 def list(request):
     # Handle file upload
     if request.method == 'POST':
-        form = PatientForm(request.POST, request.FILES)
-        if form.is_valid():
-            print('form provided')
+        form = PatientForm(request.POST)
+        #if form.is_valid():
+        print('form provided')
+        print(form)
             #newdoc = Document(docfile=request.FILES['docfile'])
             #newdoc.save()
 
             # Redirect to the document list after POST
-            return HttpResponseRedirect(reverse('list'))
+        return JsonResponse({'species': 'asd', 'strains': 'asd', 'resistances': 'asd'})
+        #    return HttpResponseRedirect(reverse('list'))
     else:
         form = PatientForm()  # A empty, unbound form
 
@@ -49,7 +51,7 @@ def getfromfile(request):
             tsvin = csv.reader(tsvin, delimiter='\t')
             for row in tsvin:
                 if len(row) == 9 and (row[0] != 'time'):# and ((1 - 0.5 * float(row[6])) > 0.95):
-                    species[row[4]] = float(row[5])
+                    species[row[4]] = row[5] + ' ' + str(1 - 0.5 * float(row[6]))
 
         with open('myproject/data/strain.dat', 'rb') as tsvin:
             tsvin = csv.reader(tsvin, delimiter='\t')
