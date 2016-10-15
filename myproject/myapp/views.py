@@ -9,20 +9,24 @@ from myproject.myapp.forms import PatientForm
 from django.http import JsonResponse
 import os
 import csv
+import json
 
 
 def list(request):
     # Handle file upload
     if request.method == 'POST':
         form = PatientForm(request.POST)
-        #if form.is_valid():
-        print('form provided')
-        print(form)
-        for key in form.species:
-            newitem = Sample(date=form.date, hospital=form.hospital, doctor=form.doctor, gender=form.gender, age_group=form.age_group, postcode=form.postcode, country=form.country, travel_last_6_m = form.travel_last_6_m, condition = form.condition, allergies_ab = form.allergies_ab, current_ab = form.current_ab, specie = key, strain = form.strains, resistances = form.resistances)
-            newitem.save()
+        if form.is_valid():
+            print('form provided')
+            speciesfromform = form['species'].value()
+            speciesjson = json.loads(speciesfromform)
+            for key in speciesjson:
+                newitem = Sample(date=form.date, hospital=form['hospital'].value(), doctor=form['doctor'].value(), gender=form['gender'].value(), age_group=form['age_group'].value(), postcode=form['postcode'].value(), country=form['country'].value(), travel_last_6_m = form['travel_last_6_m'], condition=form['condition'].value(), allergies_ab=form['allergies_ab'].value(), current_ab=form['current_ab'].value(), specie=key, strain = form['strains'].value(), resistances=form['resistances'].value())
+                newitem.save()
 
-        return JsonResponse({'result': 'saved'})
+            return JsonResponse({'result': 'saved'})
+        else:
+            return JsonResponse({'result': 'failed - form invalid'})
     else:
         form = PatientForm()  # A empty, unbound form
 

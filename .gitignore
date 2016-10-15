@@ -1,7 +1,9 @@
 # Python
 *.sqlite3
 .idea
-
+#myproject/myapp/migrations/0002_auto_20161015_1226.py
+myproject/myapp/migrations/*
+*/migrations/*
 # Vim
 *.swp
 
