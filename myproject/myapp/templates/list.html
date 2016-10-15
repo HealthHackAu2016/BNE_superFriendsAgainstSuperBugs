@@ -1,21 +1,29 @@
 {% include "base.html" %}
 {% block content %}
-    <!-- List of uploaded documents -->
-    {% if documents %}
-        <ul>
-            {% for document in documents %}
-                <li><a href="{{ document.docfile.url }}">{{ document.docfile.name }}</a></li>
-            {% endfor %}
-        </ul>
-    {% else %}
-        <p>No documents.</p>
-    {% endif %}
+{% load bootstrap_toolkit %}
+    <div class="container">
+        <div class="page-header">
+            <h1>Register Sample</h1>
+        </div>
 
-    <!-- Upload form. Note enctype attribute! -->
-    <form action="{% url "list" %}" method="post" enctype="multipart/form-data">
-        {% csrf_token %}
-        {{ form }}
+        <!-- List of uploaded documents -->
+        {% if documents %}
+            <ul>
+                {% for document in documents %}
+                    <li><a href="{{ document.docfile.url }}">{{ document.docfile.name }}</a></li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No documents.</p>
+        {% endif %}
+
+        <!-- Upload form. Note enctype attribute! -->
+        <form action="{% url "list" %}" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form|as_bootstrap }}
 
 
-        <p><input type="submit" value="start"/></p>
+            <p><input type="submit" value="start"/></p>
+        </form>
+    </div>
 {% endblock %}
