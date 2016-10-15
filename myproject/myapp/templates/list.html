@@ -1,6 +1,64 @@
 {% include "base.html" %}
 {% block content %}
 {% load bootstrap_toolkit %}
+<script>
+    $(function() {
+    var timer = null;
+    var input = document.getElementById('input');
+    var species = document.getElementById('id_species');
+    var strains = document.getElementById('id_strains');
+    var resistances = document.getElementById('id_resistances');
+    var thresholdReached = false;
+
+    function tick() {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          var response = JSON.parse(this.responseText)
+          for (var key in response["species"]){
+            if(parseFloat(response["species"][key].split(" ")[1]) > 0.95){
+                thresholdReached = true;
+            }
+          }
+          //console.log(response)
+          console.log(response["species"])
+          input.value += ('\n' + this.responseText);
+          input.scrollTop = input.scrollHeight;
+          species.value = JSON.stringify(response["species"])
+          strains.value = JSON.stringify(response["strains"])
+          resistances.value = JSON.stringify(response["resistances"])
+
+          }
+        };
+        xhttp.open("GET", "/myapp/getfromfile/", true);
+        xhttp.send();
+        start();        // restart the timer
+    };
+
+    function start() {  // use a one-off timer
+        timer = setTimeout(tick, 5000);
+        $('#start').attr("disabled", true);
+        $('#stop').attr("disabled", false);
+        $('#submit').attr("disabled", true);
+    };
+
+    function stop() {
+        clearTimeout(timer);
+        $('#start').attr("disabled", false);
+        $('#stop').attr("disabled", true);
+        if(thresholdReached == true){
+            $('#submit').attr("disabled", false);
+            $('#start').attr("disabled", true);
+        }
+
+    };
+
+    $('#start').bind("click", start); // use .on in jQuery 1.7+
+    $('#stop').bind("click", stop);
+
+    start();  // if you want it to auto-start
+});
+</script>
     <div class="container container-white">
         <div class="page-header">
             <h1>Register Sample</h1>
@@ -10,7 +68,10 @@
             {% csrf_token %}
             {{ form|as_bootstrap }}
             <div class="controls">
-                <input type="submit" value="start" class="btn btn-lg btn-default" />
+                <textarea id="input" style="height:349px"></textarea>
+                <button id="start">start</button>
+                <button id="stop" disabled>stop</button>
+                <input id="submit" type="submit" value="submit results" class="btn btn-lg btn-default" disabled />
             </div>
         </form>
     </div>

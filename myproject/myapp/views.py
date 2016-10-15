@@ -9,24 +9,26 @@ from myproject.myapp.forms import PatientForm
 from django.http import JsonResponse
 import os
 import csv
+import json
 
 
 def list(request):
     # Handle file upload
     if request.method == 'POST':
-        form = PatientForm(request.POST, request.FILES)
+        form = PatientForm(request.POST)
         if form.is_valid():
             print('form provided')
-            #newdoc = Document(docfile=request.FILES['docfile'])
-            #newdoc.save()
+            speciesfromform = form['species'].value()
+            speciesjson = json.loads(speciesfromform)
+            for key in speciesjson:
+                newitem = Sample(date=form.date, hospital=form['hospital'].value(), doctor=form['doctor'].value(), gender=form['gender'].value(), age_group=form['age_group'].value(), postcode=form['postcode'].value(), country=form['country'].value(), travel_last_6_m = form['travel_last_6_m'], condition=form['condition'].value(), allergies_ab=form['allergies_ab'].value(), current_ab=form['current_ab'].value(), specie=key, strain = form['strains'].value(), resistances=form['resistances'].value())
+                newitem.save()
 
-            # Redirect to the document list after POST
-            return HttpResponseRedirect(reverse('list'))
+            return JsonResponse({'result': 'saved'})
+        else:
+            return JsonResponse({'result': 'failed - form invalid'})
     else:
         form = PatientForm()  # A empty, unbound form
-
-    # Load documents for the list page
-    #documents = Document.objects.all()
 
     # Render list page with the documents and the form
     return render(
@@ -49,7 +51,7 @@ def getfromfile(request):
             tsvin = csv.reader(tsvin, delimiter='\t')
             for row in tsvin:
                 if len(row) == 9 and (row[0] != 'time'):# and ((1 - 0.5 * float(row[6])) > 0.95):
-                    species[row[4]] = float(row[5])
+                    species[row[4]] = row[5] + ' ' + str(1 - 0.5 * float(row[6]))
 
         with open('myproject/data/strain.dat', 'rb') as tsvin:
             tsvin = csv.reader(tsvin, delimiter='\t')

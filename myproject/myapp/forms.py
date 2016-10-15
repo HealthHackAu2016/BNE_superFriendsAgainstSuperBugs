@@ -27,5 +27,8 @@ class PatientForm(forms.Form):
     condition = forms.CharField(label='Condition:', widget=forms.Textarea)
     allergies_ab = forms.MultipleChoiceField(label='Allergies AB:', widget=forms.CheckboxSelectMultiple, choices=AB_OPTIONS)
     current_ab = forms.MultipleChoiceField(label='Current AB:', widget=forms.CheckboxSelectMultiple, choices=AB_OPTIONS)
+    species = forms.CharField(widget=forms.HiddenInput())
+    strains = forms.CharField(widget=forms.HiddenInput())
+    resistances = forms.CharField(widget=forms.HiddenInput())
 f = PatientForm(auto_id=True)
 print(f)
