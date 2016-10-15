@@ -1,7 +1,6 @@
 # Python
 *.sqlite3
 .idea
-*.py
 
 # Vim
 *.swp
