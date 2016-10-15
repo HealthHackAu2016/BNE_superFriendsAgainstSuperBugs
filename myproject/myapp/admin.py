@@ -1,4 +1,4 @@
 from django.contrib import admin
-from myproject.myapp.models import Document
-admin.site.register(Document)
+from myproject.myapp.models import Sample
+admin.site.register(Sample)
 # Register your models here.
