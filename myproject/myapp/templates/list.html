@@ -1,29 +1,17 @@
 {% include "base.html" %}
 {% block content %}
 {% load bootstrap_toolkit %}
-    <div class="container">
+    <div class="container container-white">
         <div class="page-header">
             <h1>Register Sample</h1>
         </div>
 
-        <!-- List of uploaded documents -->
-        {% if documents %}
-            <ul>
-                {% for document in documents %}
-                    <li><a href="{{ document.docfile.url }}">{{ document.docfile.name }}</a></li>
-                {% endfor %}
-            </ul>
-        {% else %}
-            <p>No documents.</p>
-        {% endif %}
-
-        <!-- Upload form. Note enctype attribute! -->
-        <form action="{% url "list" %}" method="post" enctype="multipart/form-data">
+        <form action="{% url "list" %}" method="post">
             {% csrf_token %}
             {{ form|as_bootstrap }}
-
-
-            <p><input type="submit" value="start"/></p>
+            <div class="controls">
+                <input type="submit" value="start" class="btn btn-lg btn-default" />
+            </div>
         </form>
     </div>
 {% endblock %}
