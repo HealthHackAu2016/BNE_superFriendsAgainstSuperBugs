@@ -4,7 +4,7 @@ from django.template import RequestContext
 from django.http import HttpResponseRedirect
 from django.core.urlresolvers import reverse
 
-from myproject.myapp.models import Document
+from myproject.myapp.models import Sample
 from myproject.myapp.forms import PatientForm
 from django.http import JsonResponse
 import os
@@ -28,13 +28,13 @@ def list(request):
         form = PatientForm()  # A empty, unbound form
 
     # Load documents for the list page
-    documents = Document.objects.all()
+    #documents = Document.objects.all()
 
     # Render list page with the documents and the form
     return render(
         request,
         'list.html',
-        {'documents': documents, 'form': form}
+        {'form': form}
     )
 
 
@@ -68,3 +68,13 @@ def getfromfile(request):
                         resistances.append(row[6])
 
         return JsonResponse({'species': species, 'strains': strains, 'resistances': resistances})
+
+
+def records(request):
+    samples = Sample.objects.get()
+
+    return render(
+        request,
+        'samples.html',
+        {'samples': samples}
+    )
