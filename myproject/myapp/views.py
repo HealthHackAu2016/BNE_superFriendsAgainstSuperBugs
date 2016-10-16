@@ -81,8 +81,16 @@ def getfromfile(request):
 def samples(request):
     samples = Sample.objects.all().order_by('-id')[:10]
 
-    return render(
-        request,
-        'samples.html',
-        {'samples': samples}
-    )
+    if request.method == 'POST':
+        last = request['POST'];
+        return render(
+            request,
+            'samples.html',
+            {'samples': samples, 'last': last}
+        )
+    else:
+        return render(
+            request,
+            'samples.html',
+            {'samples': samples}
+        )
