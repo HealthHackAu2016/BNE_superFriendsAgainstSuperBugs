@@ -113,3 +113,11 @@ def samples(request):
             'samples.html',
             {'samples': samples}
         )
+
+
+def results(request):
+    return render(
+        request,
+        'results.html',
+        {}
+    )
