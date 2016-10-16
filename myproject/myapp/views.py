@@ -58,6 +58,14 @@ def getallsamples(request):
         samplesjson.append(samplejson)
     return JsonResponse(samplesjson, safe=False)
 
+def deleteallsamples(request):
+    Sample.objects.all().delete()
+    return JsonResponse({'result': 'deleted'})
+
+def generateinputsamples(request):
+    samples = []
+
+
 def getfromfile(request):
     cwd = os.getcwd()
 
