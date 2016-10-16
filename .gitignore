@@ -1,7 +1,7 @@
 # Python
 *.sqlite3
 .idea
-
+myproject/myapp/migrations/*
 # Vim
 *.swp
 
