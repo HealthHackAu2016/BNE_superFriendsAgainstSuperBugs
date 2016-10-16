@@ -1,6 +1,68 @@
 {% include "base.html" %}
 {% block content %}
 {% load bootstrap_toolkit %}
+<script>
+    $(function() {
+    var timer = null;
+    var input = document.getElementById('input');
+    var species = document.getElementById('id_species');
+    var strains = document.getElementById('id_strains');
+    var resistances = document.getElementById('id_resistances');
+    var thresholdReached = false;
+
+    function tick() {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          var response = JSON.parse(this.responseText)
+          var imgnr = 0;
+          for (var key in response["species"]){
+            if(parseFloat(response["species"][key].split(" ")[1]) > 0.95){
+                if(key[0] == 'K' || key[0] == 'E'){
+                imgnr = imgnr +1
+                $('#img' + imgnr).attr("src", "{{ STATIC_URL }}" + key[0] + '1.jpg');
+                }
+                thresholdReached = true;
+            }
+          }
+          //console.log(response)
+          console.log(response["species"])
+          input.value += ('\n' + this.responseText);
+          input.scrollTop = input.scrollHeight;
+          species.value = JSON.stringify(response["species"])
+          strains.value = JSON.stringify(response["strains"])
+          resistances.value = JSON.stringify(response["resistances"])
+
+          }
+        };
+        xhttp.open("GET", "/myapp/getfromfile/", true);
+        xhttp.send();
+        start();        // restart the timer
+    };
+
+    function start() {  // use a one-off timer
+        timer = setTimeout(tick, 5000);
+        $('#start').attr("disabled", true);
+        $('#stop').attr("disabled", false);
+        $('#submit').attr("disabled", true);
+    };
+
+    function stop() {
+        clearTimeout(timer);
+        $('#start').attr("disabled", false);
+        $('#stop').attr("disabled", true);
+        if(thresholdReached == true){
+            $('#submit').attr("disabled", false);
+            $('#start').attr("disabled", true);
+        }
+
+    };
+
+    $('#start').bind("click", start); // use .on in jQuery 1.7+
+    $('#stop').bind("click", stop);
+
+});
+</script>
     <div class="container container-white">
         <div class="page-header">
             <h1>Register Sample</h1>
@@ -9,8 +71,33 @@
         <form action="{% url "list" %}" method="post">
             {% csrf_token %}
             {{ form|as_bootstrap }}
+            <div class="row row-images">
+                <div class="col-md-2 col-xs-4">
+                    <img src="{{ STATIC_URL }}q1.png" id="img1">
+                </div>
+                <div class="col-md-2 col-xs-4">
+                    <img src="{{ STATIC_URL }}q1.png" id="img2">
+                </div>
+                <div class="col-md-2 col-xs-4">
+                    <img src="{{ STATIC_URL }}q1.png" id="img3">
+                </div>
+                <div class="col-md-2 col-xs-4">
+                    <img src="{{ STATIC_URL }}q1.png" id="img4">
+                </div>
+                <div class="col-md-2 col-xs-4">
+                    <img src="{{ STATIC_URL }}q1.png" id="img5">
+                </div>
+                <div class="col-md-2 col-xs-4">
+                    <img src="{{ STATIC_URL }}q1.png" id="img6">
+                </div>
+            </div>
+            <div class="controls controls-textarea">
+                <textarea id="input"></textarea>
+            </div>
             <div class="controls">
-                <input type="submit" value="start" class="btn btn-lg btn-default" />
+                <button id="start" type="button" class="btn btn-lg btn-success">start</button>
+                <button id="stop" type="button" class="btn btn-lg btn-danger" disabled>stop</button>
+                <input id="submit" type="submit" value="submit results" class="btn btn-lg btn-primary" disabled />
             </div>
         </form>
     </div>
