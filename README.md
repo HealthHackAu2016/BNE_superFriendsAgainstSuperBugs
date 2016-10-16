@@ -19,10 +19,10 @@ Download dependencies used in the project listed in requirements.txt file
 
 AUTHORS:
 
-Alan Robertson http://github.com/alaniscool
-Jacek Serafinski http://github.com/jackpotek
-Jacek Sokolowski http://github.com/jsokol89
-Jake Parker http://github.com/GeneMachines
-Lisa Pomery
-Michael Hall http://github.com/mbhall88
-Miranda Pitt
+- Alan Robertson http://github.com/alaniscool
+- Jacek Serafinski http://github.com/jackpotek
+- Jacek Sokolowski http://github.com/jsokol89
+- Jake Parker http://github.com/GeneMachines
+- Lisa Pomery
+- Michael Hall http://github.com/mbhall88
+- Miranda Pitt
