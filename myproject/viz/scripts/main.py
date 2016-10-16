@@ -34,7 +34,7 @@ def main():
     # add markers to our map
     add_cluster_markers(outbreak_df, pc_df, map_)
 
-    map_.save('./brisbane.html')
+    map_.save('./map_outputs/brisbane.html')
 
     
 if __name__ == "__main__":

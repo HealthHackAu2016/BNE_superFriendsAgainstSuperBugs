@@ -22,7 +22,7 @@ def main():
     pc_df = read_postcode_csv(pc_handle)
 
     # parse the outbreak data
-    outbreak_handle = "./data/Outbreak.csv"
+    outbreak_handle = "./data/2016_10_15_BacOutbreak.csv"
     outbreak_df = parse_outbreak(outbreak_handle)
 
     # generate the map
