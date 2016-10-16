@@ -78,6 +78,7 @@ COUNTRY_OPTION = (
 class Sample(models.Model):
     date = models.DateField()
     hospital = models.CharField(max_length=15)
+    ward = models.CharField(max_length=10)
     doctor = models.CharField(max_length=25)
     gender = models.IntegerField()
     age_group = models.IntegerField()

@@ -11,6 +11,8 @@ import os
 import csv
 import json
 from pprint import pprint
+from django.core import serializers
+import unicodedata
 
 
 def list(request):
@@ -27,9 +29,10 @@ def list(request):
                     strainwithunderscores = strainkey.replace(" ", "_")
                     if strainwithunderscores.startswith(keywithunderscores):
                         strainalone = strainwithunderscores.replace(keywithunderscores+"_", "")
-                        newitem = Sample(date=form.date, hospital=form['hospital'].value(), doctor=form['doctor'].value(), gender=form['gender'].value(), age_group=form['age_group'].value(), postcode=form['postcode'].value(), country=form['country'].value(), travel_last_6_m = form['travel_last_6_m'], condition=form['condition'].value(), allergies_ab=form['allergies_ab'].value(), current_ab=form['current_ab'].value(), specie=key, strain=strainalone, resistances=form['resistances'].value())
+                        newitem = Sample(date=form.date, hospital=form['hospital'].value(), ward=form['ward'].value(), doctor=form['doctor'].value(), gender=form['gender'].value(), age_group=form['age_group'].value(), postcode=form['postcode'].value(), country=form['country'].value(), travel_last_6_m = form['travel_last_6_m'].value(), condition=form['condition'].value(), allergies_ab=form['allergies_ab'].value(), current_ab=form['current_ab'].value(), specie=key, strain=strainalone, resistances=form['resistances'].value())
                         newitem.save()
                         samplelist = Sample.objects.filter(doctor=form['doctor'].value()).order_by('-id')[:10]
+                        pprint(vars(newitem))
                         return render(request, 'samples.html', {'samples': samplelist, 'last': newitem})
 
             return JsonResponse({'result': 'saved'})
@@ -45,7 +48,15 @@ def list(request):
         {'form': form}
     )
 
-
+def getallsamples(request):
+    samples = Sample.objects.all()
+    samplesjson = []
+    for sample in samples:
+        allergies_ab = json.loads(sample.allergies_ab.replace("u\'", "\'").replace("\'","\""))
+        current_ab = json.loads(sample.current_ab.replace("u\'", "\'").replace("\'","\""))
+        samplejson = {'id': sample.id, 'hospital': sample.hospital, 'ward': sample.ward, 'doctor': sample.doctor, 'gender': sample.gender, 'age_group': sample.age_group, 'postcode': sample.postcode, 'country': sample.country, 'traveled':sample.travel_last_6_m, 'condition': sample.condition, 'allergies_ab': allergies_ab, 'current_ab': current_ab, 'specie': sample.specie, 'strain': sample.strain, 'resistances': json.loads(sample.resistances)}
+        samplesjson.append(samplejson)
+    return JsonResponse(samplesjson, safe=False)
 
 def getfromfile(request):
     cwd = os.getcwd()

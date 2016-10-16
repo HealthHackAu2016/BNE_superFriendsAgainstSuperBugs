@@ -18,6 +18,7 @@ now = datetime.datetime.now().strftime("%Y-%m-%d")
 class PatientForm(forms.Form):
     date = now
     hospital = forms.CharField(widget=forms.TextInput, label='Hospital:', max_length=15)
+    ward = forms.CharField(widget=forms.TextInput, label='Ward:', max_length=10)
     doctor = forms.CharField(widget=forms.TextInput, label='Doctor:', max_length=25)
     gender = forms.ChoiceField(widget=forms.RadioSelect, label='Gender:', choices=GENDER_CHOICES)
     age_group = forms.ChoiceField(widget=forms.Select, label='Age group:', choices=AGE_CHOICES)
@@ -31,4 +32,4 @@ class PatientForm(forms.Form):
     strains = forms.CharField(widget=forms.HiddenInput())
     resistances = forms.CharField(widget=forms.HiddenInput())
 f = PatientForm(auto_id=True)
-print(f)
+#print(f)
