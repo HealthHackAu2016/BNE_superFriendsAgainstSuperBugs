@@ -71,17 +71,33 @@
         <form action="{% url "list" %}" method="post">
             {% csrf_token %}
             {{ form|as_bootstrap }}
+            <div class="row row-images">
+                <div class="col-md-2 col-xs-4">
+                    <img src="{{ STATIC_URL }}q1.png" id="img1">
+                </div>
+                <div class="col-md-2 col-xs-4">
+                    <img src="{{ STATIC_URL }}q1.png" id="img2">
+                </div>
+                <div class="col-md-2 col-xs-4">
+                    <img src="{{ STATIC_URL }}q1.png" id="img3">
+                </div>
+                <div class="col-md-2 col-xs-4">
+                    <img src="{{ STATIC_URL }}q1.png" id="img4">
+                </div>
+                <div class="col-md-2 col-xs-4">
+                    <img src="{{ STATIC_URL }}q1.png" id="img5">
+                </div>
+                <div class="col-md-2 col-xs-4">
+                    <img src="{{ STATIC_URL }}q1.png" id="img6">
+                </div>
+            </div>
+            <div class="controls controls-textarea">
+                <textarea id="input"></textarea>
+            </div>
             <div class="controls">
-                <textarea id="input" style="height:349px"></textarea>
-                <button id="start" type="button">start</button>
-                <button id="stop" type="button" disabled>stop</button>
-                <img src="{{ STATIC_URL }}q1.png" id="img1">
-                <img src="{{ STATIC_URL }}q1.png" id="img2">
-                <img src="{{ STATIC_URL }}q1.png" id="img3">
-                <img src="{{ STATIC_URL }}q1.png" id="img4">
-                <img src="{{ STATIC_URL }}q1.png" id="img5">
-                <img src="{{ STATIC_URL }}q1.png" id="img6">
-                <input id="submit" type="submit" value="submit results" class="btn btn-lg btn-default" disabled />
+                <button id="start" type="button" class="btn btn-lg btn-success">start</button>
+                <button id="stop" type="button" class="btn btn-lg btn-danger" disabled>stop</button>
+                <input id="submit" type="submit" value="submit results" class="btn btn-lg btn-primary" disabled />
             </div>
         </form>
     </div>
