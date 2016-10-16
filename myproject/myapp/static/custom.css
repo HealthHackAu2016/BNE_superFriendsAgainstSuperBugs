@@ -54,6 +54,7 @@ textarea {
     margin-bottom: 20px;
     max-width: 400px;
     text-transform: uppercase;
+    margin-right: 10px;
 }
 
 .row-list {
@@ -66,7 +67,19 @@ textarea {
     border-left: 1px solid #eee;
 }
 
+.row-images {
+    margin-bottom: 20px;
+}
 
+.row-images img {
+    width: 100%;
+}
+
+.controls-textarea textarea {
+    width: 100%;
+    height: 300px;
+    margin-bottom: 20px;
+}
 
 
 
