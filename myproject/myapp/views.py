@@ -29,8 +29,8 @@ def list(request):
                         strainalone = strainwithunderscores.replace(keywithunderscores+"_", "")
                         newitem = Sample(date=form.date, hospital=form['hospital'].value(), doctor=form['doctor'].value(), gender=form['gender'].value(), age_group=form['age_group'].value(), postcode=form['postcode'].value(), country=form['country'].value(), travel_last_6_m = form['travel_last_6_m'], condition=form['condition'].value(), allergies_ab=form['allergies_ab'].value(), current_ab=form['current_ab'].value(), specie=key, strain=strainalone, resistances=form['resistances'].value())
                         newitem.save()
-                        samples = Sample.objects.all().order_by('-id')[:10]
-                        return render(request, 'samples.html', {'samples': samples, 'last': newitem})
+                        samplelist = Sample.objects.filter(doctor=form['doctor'].value()).order_by('-id')[:10]
+                        return render(request, 'samples.html', {'samples': samplelist, 'last': newitem})
 
             return JsonResponse({'result': 'saved'})
         else:
