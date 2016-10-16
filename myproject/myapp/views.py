@@ -70,11 +70,19 @@ def getfromfile(request):
         return JsonResponse({'species': species, 'strains': strains, 'resistances': resistances})
 
 
-def records(request):
-    samples = Sample.objects.get()
+def samples(request):
+    samples = Sample.objects.all().order_by('-id')[:10]
 
-    return render(
-        request,
-        'samples.html',
-        {'samples': samples}
-    )
+    if request.method == 'POST':
+        last = request['POST'];
+        return render(
+            request,
+            'samples.html',
+            {'samples': samples, 'last': last}
+        )
+    else:
+        return render(
+            request,
+            'samples.html',
+            {'samples': samples}
+        )
