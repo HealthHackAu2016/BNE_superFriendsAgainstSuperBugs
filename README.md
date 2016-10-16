@@ -10,7 +10,19 @@ Usage (Django 1.10)
 First ensure you have Django 1.10 installed. Then:
 
     $ git clone https://github.com/HealthHackAu2016/BNE_superFriendsAgainstSuperBugs.git
+    $ python manage.py makemigrations myapp
     $ python manage.py migrate
     $ python manage.py runserver
 
+Download dependencies used in the project listed in requirements.txt file
 
+
+AUTHORS:
+
+Alan Robertson http://github.com/alaniscool
+Jacek Serafinski http://github.com/jackpotek
+Jacek Sokolowski http://github.com/jsokol89
+Jake Parker http://github.com/GeneMachines
+Lisa Pomery
+Michael Hall http://github.com/mbhall88
+Miranda Pitt
