@@ -6,6 +6,7 @@ from myproject.myapp.views import samples
 from myproject.myapp.views import getallsamples
 from myproject.myapp.views import deleteallsamples
 from myproject.myapp.views import generateinputsamples
+from myproject.myapp.views import results
 
 urlpatterns = [
     url(r'^list/$', list, name='list'),
@@ -13,5 +14,6 @@ urlpatterns = [
     url(r'^samples/$', samples, name='samples'),
     url(r'^allsamples/$', getallsamples, name='getallsamples'),
     url(r'^deleteallsamples/$', deleteallsamples, name='deleteallsamples'),
-    url(r'^generateinputsamples/$', generateinputsamples, name='generateinputsamples')
+    url(r'^generateinputsamples/$', generateinputsamples, name='generateinputsamples'),
+    url(r'^results/$', results, name='results'),
 ]
