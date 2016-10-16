@@ -1,0 +1,66 @@
+Date,Care_Location,Ward_Location,Doctor_ID,Gender,Age group,Postcode,Resides in Australia,Travel within the last 6 months? where? When,Patient condition,Species,Strain tAUpe,Amioglycoside,Beta_lactamase,Beta_lactamase_class_A,Beta_lactamase_class_B,Beta_lactamase_class_C,Beta_lactamase_class_D,Chloramphenicol,Fluoroquiolone,Fosfomycin,Penicillin,Polymyxin,Rifamycin,Tetracycline,Trimethoprim,1,1,1
+10-09-2016,QLD_001,WD_101,100-010-0050,1,15,4064,AU,-,"Pneumonia; Fever; Chest Pain",Klebsiella pneumoniae,Brisbane (CSS_BAA-7492_ARSR_11),0,1,1,1,1,1,0,1,0,1,0,0,0,0
+10-10-2016,QLD_001,WD_101,100-010-0039,1,17,4171,AU,-,"Pneumonia; Fever; Chest Pain",Klebsiella pneumoniae,Brisbane (CSS_BAA-2461_STST_11),0,1,1,1,1,1,0,1,0,1,0,0,0,0
+10-10-2016,QLD_001,WD_101,100-010-0050,2,17,4101,AU,-,"Muscle Pain; Fever",Klebsiella pneumoniae,Brisbane (CSS_BAA-2461_STST_11),0,1,1,1,1,1,0,1,0,1,0,0,0,0
+10-11-2016,QLD_001,WD_101,100-010-0050,1,17,4101,MX,CN,"Fever; Pneumonia ",Klebsiella pneumoniae,Brisbane (CSS_BAA-2461_STST_11),0,1,1,1,1,1,0,1,0,1,0,0,0,0
+10-11-2016,QLD_001,WD_101,100-010-0039,1,16,4151,AU,-,"Fever; Pneumonia ",Klebsiella pneumoniae,Brisbane (CSS_BAA-2461_STST_11),0,1,1,1,1,1,0,1,0,1,0,0,0,0
+10-11-2016,QLD_001,WD_331,100-010-0065,1,16,4066,AU,NZ,"Pneumonia; Muscle Pain; Chest Pain",Klebsiella pneumoniae,Brisbane (CSS_BAA-2461_STST_11),0,1,1,1,1,1,0,1,0,1,0,0,0,0
+10-11-2016,QLD_001,WD_331,100-010-0065,1,16,4068,AU,-,"Head ache; Fever",Klebsiella pneumoniae,Brisbane (CSS_BAA-2461_STST_11),0,1,1,1,1,1,0,1,0,1,0,0,1,0
+10-11-2016,QLD_001,WD_331,100-010-0065,2,15,4103,AU,-,"Fever; Chest Pain",Klebsiella pneumoniae,Brisbane (CSS_BAA-2461_STST_11),0,1,1,1,1,1,0,1,0,1,0,0,1,0
+10-12-2016,QLD_001,WD_101,100-010-0039,2,17,4103,AU,US,"Pneumonia; Muscle Pain; Chest Pain",Klebsiella pneumoniae,Brisbane (CSS_BAA-2461_STST_11),0,1,1,1,1,1,0,1,0,1,0,0,0,0
+10-12-2016,QLD_001,WD_101,100-010-0039,2,16,4066,AU,CN,"Chest Pain; Fever; Pneumonia",Klebsiella pneumoniae,Brisbane (CSS_BAA-2461_STST_11),0,1,1,1,1,1,0,1,0,1,0,0,0,0
+10-12-2016,QLD_001,WD_331,1000-000-380,2,14,4067,AU,UK,"Head ache; Fever",Klebsiella pneumoniae,Brisbane (CSS_BAA-2461_STST_11),0,1,1,1,1,1,0,1,0,1,0,0,1,0
+10-12-2016,QLD_001,WD_331,1000-000-380,1,15,4101,AU,-,"Muscle Pain; Fever",Klebsiella pneumoniae,Brisbane (CSS_BAA-2461_STST_11),0,1,1,1,1,1,0,1,0,1,0,1,1,0
+10-12-2016,QLD_001,WD_331,100-010-0065,2,17,4101,AU,NZ,"Pneumonia; Fever; Chest Pain",Klebsiella pneumoniae,Brisbane (CSS_BAA-2461_STST_11),0,1,1,1,1,1,0,1,0,1,0,0,1,0
+10-12-2016,QLD_001,WD_331,100-010-0065,1,17,4101,AU,-,"Muscle Pain; Fever", Klebsiella pneumoniae,Brisbane (CSS_BAA-2461_STST_11),0,1,1,1,1,1,0,1,0,1,0,0,1,0
+10-12-2016,QLD_001,WD_331,100-010-0065,2,15,4103,AU,-,Pneumonia ,Klebsiella pneumoniae,Brisbane (CSS_BAA-2461_STST_11),0,1,1,1,1,1,0,1,0,1,0,0,0,0
+10-13-2016,PP_8612,AC_540,100-000-0711,2,16,4032,AU,-,Pneumonia ,Klebsiella pneumoniae,Brisbane (CSS_BAA-2461_STST_11),0,1,1,1,1,1,0,1,0,1,0,0,1,0
+10-13-2016,QLD_001,WD_101,100-010-0050,2,14,4067,AU,MX,"Head ache; Fever",Klebsiella pneumoniae,Brisbane (CSS_BAA-2461_STST_11),0,1,1,1,1,1,0,1,0,1,0,0,0,0
+10-13-2016,QLD_001,WD_101,100-010-0039,2,15,4067,AU,CN,Pneumonia ,Klebsiella pneumoniae,Brisbane (CSS_BAA-2461_STST_11),0,1,1,1,1,1,0,1,0,1,0,0,1,0
+10-13-2016,QLD_001,WD_281,100-010-9051,2,12,4066,AU,-,Pneumonia ,Klebsiella pneumoniae,Brisbane (CSS_BAA-2461_STST_11),0,1,1,1,1,1,0,1,0,1,0,0,1,0
+10-13-2016,QLD_001,WD_331,100-000-0380,2,17,4101,NZ,-,"Pneumonia; Fever; Chest Pain",Klebsiella pneumoniae,Brisbane (CSS_BAA-2461_STST_11),0,1,1,1,1,1,0,1,0,1,0,0,0,0
+10-13-2016,QLD_001,WD_331,100-000-0380,2,16,4151,AU,-,"Fever; Chest Pain",Klebsiella pneumoniae,Brisbane (CSS_BAA-2461_STST_11),0,1,1,1,1,1,0,1,0,1,0,0,1,0
+10-13-2016,QLD_001,WD_331,100-010-0065,2,17,4104,NZ,DE,"Head ache; Fever",Klebsiella pneumoniae,Brisbane (CSS_BAA-2461_STST_11),0,1,1,1,1,1,0,1,0,1,0,1,1,0
+10-13-2016,QLD_001,WD_331,100-010-0065,1,16,4064,AU,NZ,"Pneumonia; Fever; Chest Pain",Klebsiella pneumoniae,Brisbane (CSS_BAA-2461_STST_11),0,1,1,1,1,1,0,1,0,1,0,0,0,0
+10-13-2016,QLD_001,WD_331,100-000-0380,2,16,4066,AU,-,"Pneumonia; Fever; Chest Pain",Klebsiella pneumoniae,Brisbane (CSS_BAA-2461_STST_11),0,1,1,1,1,1,0,1,0,1,0,1,1,0
+10-14-2016,QLD_001,WD_101,100-010-0050,2,15,4151,AU,-,"Pneumonia; Muscle Pain; Chest Pain",Klebsiella pneumoniae,Brisbane (CSS_BAA-2461_STST_11),0,1,1,1,1,1,1,1,0,1,0,0,1,0
+10-14-2016,QLD_001,WD_101,100-010-0050,1,15,4103,AU,-,"Head ache; Fever",Klebsiella pneumoniae,Brisbane (CSS_BAA-2461_STST_11),0,1,1,1,1,1,1,1,0,1,0,0,1,0
+10-14-2016,QLD_001,WD_101,100-010-0050,1,17,4101,AU,-,"Muscle Pain; Fever",Klebsiella pneumoniae,Brisbane (CSS_BAA-2461_STST_11),0,1,1,1,1,1,1,1,0,1,0,0,1,0
+10-14-2016,QLD_001,WD_281,100-010-9051,2,9,4066,NZ,TH,Pneumonia ,Klebsiella pneumoniae,Brisbane (CSS_BAA-2461_STST_11),0,1,1,1,1,1,1,1,0,1,0,0,0,1
+10-14-2016,QLD_001,WD_281,100-010-9051,2,15,4067,AU,-,"Chest Pain; Fever, Pneumonia ",Klebsiella pneumoniae,Brisbane (CSS_BAA-2461_STST_11),0,1,1,1,1,1,1,1,0,1,0,0,1,1
+10-14-2016,QLD_001,WD_281,100-010-9051,1,16,4068,AU,CH,Pneumonia ,Klebsiella pneumoniae,Brisbane (CSS_BAA-2461_STST_11),0,1,1,1,1,1,1,1,0,1,0,0,0,1
+10-14-2016,QLD_001,WD_281,100-010-9051,2,17,4102,AU,-,"Muscle Pain; Fever",Klebsiella pneumoniae,Brisbane (CSS_BAA-2461_STST_11),0,1,1,1,1,1,0,1,0,1,0,0,1,0
+10-14-2016,QLD_001,WD_331,100-010-0065,2,16,4102,AU,-,"Chest Pain; Fever; Pneumonia ",Klebsiella pneumoniae,Brisbane (CSS_BAA-2461_STST_11),0,1,1,1,1,1,0,1,0,1,0,1,1,0
+10-14-2016,QLD_001,WD_331,100-010-0065,1,15,4151,AU,-,Pneumonia ,Klebsiella pneumoniae,Brisbane (CSS_BAA-2461_STST_11),0,1,1,1,1,1,0,1,0,1,0,1,1,0
+10-15-2016,PP_8612,AC_540,100-000-0711,1,15,4032,KO,-,"Pneumonia; Fever; Chest Pain",Klebsiella pneumoniae,Brisbane (CSS_BAA-2461_STST_11),0,1,1,1,1,1,0,1,0,1,0,0,1,0
+10-15-2016,PP_8612,AC_540,100-000-0711,1,17,4032,AU,-,"Fever; Pneumonia ",Klebsiella pneumoniae,Brisbane (CSS_BAA-2461_STST_11),0,1,1,1,1,1,0,1,0,1,0,0,1,0
+10-15-2016,PP_8612,AC_540,100-000-0711,2,17,4032,AU,ND,"Fever; Chest Pain",Klebsiella pneumoniae,Brisbane (CSS_BAA-2461_STST_11),0,1,1,1,1,1,1,1,0,1,0,0,1,0
+10-15-2016,QLD_001,WD_101,100-010-0050,2,12,4104,AU,-,"Pneumonia; Fever, Chest Pain",Klebsiella pneumoniae,Brisbane (CSS_BAA-2461_STST_11),0,1,1,1,1,1,1,1,0,1,0,0,1,0
+10-15-2016,QLD_001,WD_101,100-010-0050,1,14,4151,AU,-,"Fever; Chest Pain",Klebsiella pneumoniae,Brisbane (CSS_BAA-2461_STST_11),0,1,1,1,1,1,0,1,0,1,0,0,1,1
+10-15-2016,QLD_001,WD_281,100-010-9051,1,9,4103,AU,-,"Head ache; Fever",Klebsiella pneumoniae,Brisbane (CSS_BAA-2461_STST_11),0,1,1,1,1,1,0,1,0,1,0,0,1,0
+10-15-2016,QLD_001,WD_281,100-010-9051,2,15,4151,IN,NZ,"Head ache; Fever",Klebsiella pneumoniae,Brisbane (CSS_BAA-2461_STST_11),0,1,1,1,1,1,0,1,0,1,0,0,1,1
+10-15-2016,QLD_001,WD_281,100-010-9051,2,16,4101,AU,TW,"Head ache; Fever",Klebsiella pneumoniae,Brisbane (CSS_BAA-2461_STST_11),0,1,1,1,1,1,0,1,0,1,0,0,1,0
+10-15-2016,QLD_001,WD_281,100-010-9051,1,11,4067,CN,NZ,"Fever; Chest Pain",Klebsiella pneumoniae,Brisbane (CSS_BAA-2461_STST_11),0,1,1,1,1,1,1,1,0,1,0,0,1,0
+10-15-2016,QLD_001,WD_331,100-000-0380,2,15,4067,KO,CN,Pneumonia ,Klebsiella pneumoniae,Brisbane (CSS_BAA-2461_STST_11),0,1,1,1,1,1,1,1,0,1,0,0,1,0
+10-15-2016,QLD_001,WD_331,100-000-0380,2,17,4102,AU,IN,"Head ache; Fever",Klebsiella pneumoniae,Brisbane (CSS_BAA-2461_STST_11),0,1,1,1,1,1,0,1,0,1,0,1,1,0
+10-15-2016,QLD_005,WD_822,100-021-0024,2,11,4006,GE,NZ,Pneumonia ,Klebsiella pneumoniae,Brisbane (CSS_BAA-2461_STST_11),1,1,1,1,1,1,0,1,0,1,0,1,1,1
+10-16-2016,PP_8612,AC_540,100-000-0711,2,16,4032,AU,NZ,"Fever; Chest Pain",Klebsiella pneumoniae,Brisbane (CSS_BAA-2461_STST_11),1,1,1,1,1,1,0,1,0,1,0,0,1,0
+10-16-2016,PP_8612,AC_540,100-000-0711,1,16,4032,AU,-,"Fever; Chest Pain",Klebsiella pneumoniae,Brisbane (CSS_BAA-2461_STST_11),1,1,1,1,1,1,0,1,0,1,0,0,1,0
+10-16-2016,PP_8612,AC_540,100-000-0711,2,16,4032,AU,NZ,"Pneumonia; Fever; Chest Pain",Klebsiella pneumoniae,Brisbane (CSS_BAA-2461_STST_11),1,1,1,1,1,1,1,1,0,1,0,0,1,0
+10-16-2016,PP_8612,AC_540,100-000-0711,1,15,4032,AU,-,"Fever; Pneumonia ",Klebsiella pneumoniae,Brisbane (CSS_BAA-2461_STST_11),1,1,1,1,1,1,0,1,0,1,0,0,1,1
+10-16-2016,PP_8612,AC_540,100-000-0711,1,17,4032,AU,-,"Head ache; Fever",Klebsiella pneumoniae,Brisbane (CSS_BAA-2461_STST_11),1,1,1,1,1,1,1,1,0,1,0,0,1,1
+10-16-2016,QLD_001,WD_101,100-010-0039,2,15,4102,AU,EY,"Fever; Chest Pain",Klebsiella pneumoniae,Brisbane (CSS_BAA-2461_STST_11),1,1,1,1,1,1,0,1,0,1,0,0,1,1
+10-16-2016,QLD_001,WD_101,100-010-0050,1,16,4151,AU,-,"Chest Pain; Fever, Pneumonia ",Klebsiella pneumoniae,Brisbane (CSS_BAA-2461_STST_11),0,1,1,1,1,1,1,1,1,1,0,0,1,0
+10-16-2016,QLD_001,WD_101,100-010-0050,2,16,4067,AU,-,"Muscle Pain; Fever",Klebsiella pneumoniae,Brisbane (CSS_BAA-2461_STST_11),0,1,1,1,1,1,0,1,1,1,0,0,1,0
+10-16-2016,QLD_001,WD_281,100-010-9051,2,15,4064,AU,-,"Fever; Pneumonia ",Klebsiella pneumoniae,Brisbane (CSS_BAA-2461_STST_11),0,1,1,1,1,1,1,1,1,1,0,0,1,1
+10-16-2016,QLD_001,WD_281,100-010-9051,2,17,4067,AU,-,"Head ache; Fever",Klebsiella pneumoniae,Brisbane (CSS_BAA-2461_STST_11),0,1,1,1,1,1,1,1,1,1,0,0,1,1
+10-16-2016,QLD_001,WD_281,100-010-9051,2,11,4103,AU,-,"Fever; Pneumonia ",Klebsiella pneumoniae,Brisbane (CSS_BAA-2461_STST_11),0,1,1,1,1,1,1,1,1,1,0,0,1,1
+10-16-2016,QLD_001,WD_281,100-010-9051,1,12,4151,AU,TW,Pneumonia ,Klebsiella pneumoniae,Brisbane (CSS_BAA-2461_STST_11),1,1,1,1,1,1,1,1,0,1,0,0,1,1
+10-16-2016,QLD_001,WD_281,100-010-9051,1,11,4067,AU,-,"Fever; Pneumonia ",Klebsiella pneumoniae,Brisbane (CSS_BAA-2461_STST_11),1,1,1,1,1,1,1,1,0,1,1,0,1,1
+10-16-2016,QLD_001,WD_331,100-000-0380,2,16,4102,AU,-,"Muscle Pain; Fever",Klebsiella pneumoniae,Brisbane (CSS_BAA-2461_STST_11),1,1,1,1,1,1,1,1,0,1,0,0,1,1
+10-16-2016,QLD_001,WD_798,000-000-044,2,1,4103,AU,-,"Fever; Pneumonia ",Klebsiella pneumoniae,Brisbane (CSS_BAA-2461_STST_11),1,1,1,1,1,1,1,1,0,1,1,0,1,1
+10-16-2016,QLD_001,WD_798,000-000-044,1,1,4064,AU,-,"Pneumonia; Fever; Chest Pain",Klebsiella pneumoniae,Brisbane (CSS_BAA-2461_STST_11),1,1,1,1,1,1,1,1,0,1,0,0,1,1
+10-16-2016,QLD_005,WD_822,100-021-0024,1,15,4005,AU,-,"Chest Pain; Fever; Pneumonia ",Klebsiella pneumoniae,Brisbane (CSS_BAA-2461_STST_11),0,1,1,1,1,1,1,1,1,1,0,1,1,1
+10-16-2016,QLD_005,WD_822,100-021-0024,2,15,4000,AU,-,"Muscle Pain; Fever",Klebsiella pneumoniae,Brisbane (CSS_BAA-2461_STST_11),0,1,1,1,1,1,1,1,1,1,0,1,1,1
+10-16-2016,QLD_005,WD_822,100-021-0024,2,17,4005,NZ,NZ,"Pneumonia; Fever; Chest Pain",Klebsiella pneumoniae,Brisbane (CSS_BAA-2461_STST_11),0,1,1,1,1,1,1,1,1,1,1,1,1,1
+10-16-2016,PP_8719,AC_040,100-000-0711,2,16,4032,AU,-,Pneumonia ,Klebsiella pneumoniae,Brisbane (CSS_BAA-2461_STST_11),0,1,1,1,1,1,1,1,1,1,1,1,1,1
