@@ -6,95 +6,127 @@
         <div class="page-header">
             <h1>Last added sample</h1>
         </div>
-        <div class="row">
-            <div class="col-md-2 col-xs-12">
+        <div class="row row-list">
+            <div class="col-md-3 col-xs-12">
                 <strong>Date:</strong>
             </div>
-            <div class="col-md-10 col-xs-12">
+            <div class="col-md-9 col-xs-12">
                 {{ last.date }}
             </div>
-            <div class="col-md-2 col-xs-12">
+        </div>
+        <div class="row row-list">
+            <div class="col-md-3 col-xs-12">
                 <strong>Hospital:</strong>
             </div>
-            <div class="col-md-10 col-xs-12">
+            <div class="col-md-9 col-xs-12">
                 {{ last.hospital }}
             </div>
-            <div class="col-md-2 col-xs-12">
+        </div>
+        <div class="row row-list">
+            <div class="col-md-3 col-xs-12">
                 <strong>Ward:</strong>
             </div>
-            <div class="col-md-10 col-xs-12">
+            <div class="col-md-9 col-xs-12">
                 {{ last.ward }}
             </div>
-            <div class="col-md-2 col-xs-12">
+        </div>
+        <div class="row row-list">
+            <div class="col-md-3 col-xs-12">
                 <strong>Doctor:</strong>
             </div>
-            <div class="col-md-10 col-xs-12">
+            <div class="col-md-9 col-xs-12">
                 {{ last.doctor }}
             </div>
-            <div class="col-md-2 col-xs-12">
+        </div>
+        <div class="row row-list">
+            <div class="col-md-3 col-xs-12">
                 <strong>Gender:</strong>
             </div>
-            <div class="col-md-10 col-xs-12">
+            <div class="col-md-9 col-xs-12">
                 {{ last.gender }}
             </div>
-            <div class="col-md-2 col-xs-12">
+        </div>
+        <div class="row row-list">
+            <div class="col-md-3 col-xs-12">
                 <strong>Age group:</strong>
             </div>
-            <div class="col-md-10 col-xs-12">
+            <div class="col-md-9 col-xs-12">
                 {{ last.age_group }}
             </div>
-            <div class="col-md-2 col-xs-12">
+        </div>
+        <div class="row row-list">
+            <div class="col-md-3 col-xs-12">
                 <strong>Postcode:</strong>
             </div>
-            <div class="col-md-10 col-xs-12">
+            <div class="col-md-9 col-xs-12">
                 {{ last.postcode }}
             </div>
-            <div class="col-md-2 col-xs-12">
+        </div>
+        <div class="row row-list">
+            <div class="col-md-3 col-xs-12">
                 <strong>Country:</strong>
             </div>
-            <div class="col-md-10 col-xs-12">
+            <div class="col-md-9 col-xs-12">
                 {{ last.country }}
             </div>
-            <div class="col-md-2 col-xs-12">
+        </div>
+        <div class="row row-list">
+            <div class="col-md-3 col-xs-12">
                 <strong>Traveled recently:</strong>
             </div>
-            <div class="col-md-10 col-xs-12">
+            <div class="col-md-9 col-xs-12">
                 {{ last.travel_last_6_m }}
             </div>
-            <div class="col-md-2 col-xs-12">
+        </div>
+        <div class="row row-list">
+            <div class="col-md-3 col-xs-12">
                 <strong>Condition:</strong>
             </div>
-            <div class="col-md-10 col-xs-12">
+            <div class="col-md-9 col-xs-12">
                 {{ last.condition }}
             </div>
-            <div class="col-md-2 col-xs-12">
+        </div>
+        <div class="row row-list">
+            <div class="col-md-3 col-xs-12">
                 <strong>Allergies AB:</strong>
             </div>
-            <div class="col-md-10 col-xs-12">
-                {{ last.allergies_ab }}
+            <div class="col-md-9 col-xs-12">
+                {% for allergy in last.allergies_ab %}
+                     {{ allergy }}<br>
+                {% endfor %}
             </div>
-            <div class="col-md-2 col-xs-12">
+        </div>
+        <div class="row row-list">
+            <div class="col-md-3 col-xs-12">
                 <strong>Current AB:</strong>
             </div>
-            <div class="col-md-10 col-xs-12">
-                {{ last.current_ab }}
+            <div class="col-md-9 col-xs-12">
+                {% for ab in last.current_ab %}
+                     {{ ab }}<br>
+                {% endfor %}
             </div>
-            <div class="col-md-2 col-xs-12">
+        </div>
+        <div class="row row-list">
+            <div class="col-md-3 col-xs-12">
                 <strong>Specie:</strong>
             </div>
-            <div class="col-md-10 col-xs-12">
+            <div class="col-md-9 col-xs-12">
                 {{ last.specie }}
             </div>
-            <div class="col-md-2 col-xs-12">
+        </div>
+        <div class="row row-list">
+            <div class="col-md-3 col-xs-12">
                 <strong>Strain:</strong>
             </div>
-            <div class="col-md-10 col-xs-12">
+            <div class="col-md-9 col-xs-12">
                 {{ last.strain }}
             </div>
-            <div class="col-md-2 col-xs-12">
+        </div>
+        <div class="row row-list">
+            <div class="col-md-3 col-xs-12">
                 <strong>Resistances:</strong>
             </div>
-            <div class="col-md-10 col-xs-12">
+            <div class="col-md-9 col-xs-12">
                 {{ last.resistances }}
             </div>
         </div>
