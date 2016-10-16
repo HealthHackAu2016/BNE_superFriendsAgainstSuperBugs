@@ -2,10 +2,6 @@
 
 from django import forms
 import datetime
-from django_countries.fields import CountryField
-from django_countries.widgets import CountrySelectWidget
-from django_countries import countries
-from django_countries.fields import LazyTypedChoiceField
 from myproject.myapp.models import GENDER_CHOICES
 from myproject.myapp.models import AGE_CHOICES
 from myproject.myapp.models import AB_OPTIONS
