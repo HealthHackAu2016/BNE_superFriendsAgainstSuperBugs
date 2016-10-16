@@ -64,6 +64,58 @@ def deleteallsamples(request):
 
 def generateinputsamples(request):
     samples = []
+    with open('myproject/data/aaa.csv', 'rb') as tsvin:
+            tsvin = csv.reader(tsvin, delimiter=',')
+            for row in tsvin:
+                if len(row) == 26:
+                    print('yes')
+                    date = "2016-" + row[0][:5]
+                    hospital = row[1]
+                    ward = row[2]
+                    doctor = row[3]
+                    gender = row[4]
+                    age = row[5]
+                    postcode = row[6]
+                    country = row[7]
+                    travel = row[8]
+                    condition = row[9]
+                    specie = row[10]
+                    strain = row[11]
+                    resist = []
+                    if row[12] == 1:
+                        resist.append("amioglycoside")
+                    if row[13] == 1:
+                        resist.append("beta_lactamase")
+                    if row[14] == 1:
+                        resist.append("beta_lactamase_class_A")
+                    if row[15] == 1:
+                        resist.append("beta_lactamase_class_B")
+                    if row[16] == 1:
+                        resist.append("beta_lactamase_class_C")
+                    if row[17] == 1:
+                        resist.append("beta_lactamase_class_D")
+                    if row[18] == 1:
+                        resist.append("chloramphenicol")
+                    if row[19] == 1:
+                        resist.append("fluoroquiolone")
+                    if row[20] == 1:
+                        resist.append("fosfomycin")
+                    if row[21] == 1:
+                        resist.append("penicillin")
+                    if row[22] == 1:
+                        resist.append("polymyxin")
+                    if row[23] == 1:
+                        resist.append("rifamycin")
+                    if row[24] == 1:
+                        resist.append("tetracycline")
+                    if row[25] == 1:
+                        resist.append("trimethoprim")
+
+                    sample = Sample(current_ab="[]", allergies_ab="[]", date=date, hospital=hospital, ward=ward, doctor=doctor, gender=gender, age_group=age, postcode=postcode, country=country, travel_last_6_m=travel, condition=condition, specie=specie, strain=strain, resistances=resist)
+                    sample.save()
+                else:
+                    print('no, ' + str(len(row)))
+    return JsonResponse({'result': 'doing ...'})
 
 
 def getfromfile(request):
