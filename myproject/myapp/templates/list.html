@@ -15,8 +15,13 @@
         xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
           var response = JSON.parse(this.responseText)
+          var imgnr = 0;
           for (var key in response["species"]){
             if(parseFloat(response["species"][key].split(" ")[1]) > 0.95){
+                if(key[0] == 'K' || key[0] == 'E'){
+                imgnr = imgnr +1
+                $('#img' + imgnr).attr("src", "{{ STATIC_URL }}" + key[0] + '1.jpg');
+                }
                 thresholdReached = true;
             }
           }
@@ -70,6 +75,12 @@
                 <textarea id="input" style="height:349px"></textarea>
                 <button id="start" type="button">start</button>
                 <button id="stop" type="button" disabled>stop</button>
+                <img src="{{ STATIC_URL }}q1.png" id="img1">
+                <img src="{{ STATIC_URL }}q1.png" id="img2">
+                <img src="{{ STATIC_URL }}q1.png" id="img3">
+                <img src="{{ STATIC_URL }}q1.png" id="img4">
+                <img src="{{ STATIC_URL }}q1.png" id="img5">
+                <img src="{{ STATIC_URL }}q1.png" id="img6">
                 <input id="submit" type="submit" value="submit results" class="btn btn-lg btn-default" disabled />
             </div>
         </form>

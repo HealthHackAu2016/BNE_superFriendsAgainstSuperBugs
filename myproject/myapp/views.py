@@ -54,7 +54,7 @@ def getallsamples(request):
     for sample in samples:
         allergies_ab = json.loads(sample.allergies_ab.replace("u\'", "\'").replace("\'","\""))
         current_ab = json.loads(sample.current_ab.replace("u\'", "\'").replace("\'","\""))
-        samplejson = {'id': sample.id, 'hospital': sample.hospital, 'ward': sample.ward, 'doctor': sample.doctor, 'gender': sample.gender, 'age_group': sample.age_group, 'postcode': sample.postcode, 'country': sample.country, 'traveled':sample.travel_last_6_m, 'condition': sample.condition, 'allergies_ab': allergies_ab, 'current_ab': current_ab, 'specie': sample.specie, 'strain': sample.strain, 'resistances': json.loads(sample.resistances)}
+        samplejson = {'id': sample.id, 'date': sample.date, 'hospital': sample.hospital, 'ward': sample.ward, 'doctor': sample.doctor, 'gender': sample.gender, 'age_group': sample.age_group, 'postcode': sample.postcode, 'country': sample.country, 'traveled':sample.travel_last_6_m, 'condition': sample.condition, 'allergies_ab': allergies_ab, 'current_ab': current_ab, 'specie': sample.specie, 'strain': sample.strain, 'resistances': json.loads(sample.resistances)}
         samplesjson.append(samplejson)
     return JsonResponse(samplesjson, safe=False)
 
